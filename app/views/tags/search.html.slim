@@ -1,0 +1,3 @@
+- @tags.each do |tag|
+    li.d-flex.list-group-item.cursor-pointer[role="option" data-autocomplete-value="#{tag.id}" data-autocomplete-label="#{tag.name}"]
+      = tag.name

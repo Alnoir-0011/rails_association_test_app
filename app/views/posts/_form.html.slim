@@ -1,0 +1,11 @@
+= bootstrap_form_with model: post, class: 'mb-3'do |f|
+  = f.text_field :title
+  = f.text_area :content
+  = f.label :tags
+  .mb-3 data-controller='autocomplete tag-form' data-autocomplete-url-value='/tags/search' role='combobox'
+    input.mb-1.form-control#tag-input type="text" data-autocomplete-target='input'
+    ul.list-group data-autocomplete-target='results'
+    = f.hidden_field :tag_names, id: 'tag-names'
+    #tag-area.mb-3
+
+  input.btn.btn-primary type="button" onClick="submit();" value="submit"

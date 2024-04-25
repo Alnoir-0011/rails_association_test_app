@@ -1,0 +1,10 @@
+.container
+  .col-md-10.offset-md-1
+    h1.my-3 Posts
+
+    .row.border-bottom.pb-1
+      .col-4 title
+      .col-4 content
+      .col-4
+        = link_to 'Add', new_post_path, class: 'btn btn-primary col-6 ms-auto py-1 mx-2'
+    = render @posts

@@ -9,4 +9,7 @@ html
     = stylesheet_link_tag "application", "data-turbo-track": "reload"
     = javascript_include_tag "application", "data-turbo-track": "reload", type: "module"
   body
+    - flash.each do |message_type, message|
+      .alert.alert-success
+        = message
     = yield
