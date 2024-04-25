@@ -50,6 +50,8 @@ gem "bootsnap", require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ]
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 group :development do
@@ -68,3 +70,19 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+# slim
+gem 'slim-rails'
+gem 'html2slim-ruby3', '~> 0.2.1'
+
+# 環境変数
+gem 'dotenv-rails'
+
+# 初期データの投入
+gem 'seed-fu'
+
+# 入力フォーム
+gem 'bootstrap_form'
+
+# デコレーター
+gem 'draper'
